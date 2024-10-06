@@ -1,0 +1,22 @@
+state basic {
+    reload = 10.5
+    recoil = 1.4
+    shudder = 0.1
+    damage = 0.75
+    speed = 4.5
+    spray = 15
+}
+
+gun basic {
+    length = 0.9d
+    width = 0.4d
+
+    type = Bullet
+    stats = basic
+}
+
+tank Basic extends genericTank {
+    label = "Basic"
+    danger -= 1
+    guns = basic
+}

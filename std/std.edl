@@ -1,0 +1,112 @@
+const defaultSkills = 9
+const smasherSkills = 12
+
+tank GenericEntity {
+    name = ""
+    label = "Unknown Entity"
+    type = "unknown"
+    damageClass = 0
+    danger = 0
+    value = 0
+    shape = 0
+    color = grey
+
+    motionType = glide
+    facingType = toTarget
+    hitsOwnType = normal
+
+    controllers = none
+
+    effects = damage, rate, motion
+    draw = self, border, fill
+    flags = acceptsScore, healthWithLevel, canBeOnLeaderboard
+
+    // disabled: independent, hasNoMaster, isImmuneToTiles, intangible, giveKillMessage, canGoOutsideRoom, dieAtLowSpeed, dieAtLowRange, clearOnMasterUpgrade, persistsAfterDeath, variesInSide, hasNoRecoil, syncWithTank, buffVsFood, obstacle, cravesAttention, necro
+
+    for (a in 0..9 step 1)
+        upgrades_tier_[a] = none
+
+    skill = all 0
+
+    // aps++
+    rebootUpgradeTree = null
+
+    level = 0
+    skillCap = all defaultSkills
+    maxChildren = 0
+    displayName = true
+    on = empty
+
+    body = {
+        acceleration = 1
+        speed = 0
+        health = 1
+        resist = 1
+        shield = 0
+        regen = 0
+        damage = 1
+        penetration = 1
+        range = 0
+        fov = 1
+        shock_absorb = 1
+        recoil_multiplier = 1
+        density = 1
+        stealth = 1
+        pushability = 1
+        hetero = 2
+    }
+
+    food = {
+        level = -1
+    }
+
+    guns = empty
+}
+
+tank GenericTank extends GenericEntity {
+    label = "Unknown Class"
+    type = "tank"
+    damageClass = 2
+    danger = 5
+    size = 12
+    maxChildren = 0
+
+    motionType = motor
+    facingType = toTarget
+
+    effects -= damage
+    draw += health
+    flags += giveKillMessage, resetEvents
+
+    // aps++
+    rebootUpgradeTree = Basic
+
+    // tip: follow this order
+    body = {
+        damage = 3
+        health = 20
+
+        damage = 3
+        penetration = 1.05
+
+        speed = 5.25
+        acceleration = 1.6
+
+        shield = 8
+        regen = 1.025
+
+        density = 0.5
+        fov = 1.02
+        pushability = 1
+        hetero = 3
+    }
+
+    arenaCloser = false
+    hitsOwnType = hardOnlyTanks
+
+    // tip: follow this order
+    guns = empty
+    props = empty
+    turrets = empty
+    on = empty
+}

@@ -1,0 +1,55 @@
+import std
+
+gun genericMothership extends droneFactory {
+    length = 0.215d
+    width = 0.155d
+    aspect = 1.2
+    y = 0.4d
+
+    stats += overseer, mothership
+    children = 2
+}
+
+gun mothership1 extends genericMothership {
+    angle = 22.5
+}
+
+gun mothership2 extends genericMothership {
+    angle = 45
+    delay = 1 / 32
+
+    type += tank {
+        ai += skynet
+        independent = true
+        body = {
+            fov = 2
+        }
+    }
+}
+
+tank Mothership extends genericTank {
+    label = "Mothership"
+    danger *= 2
+    size *= 7 / 3
+    shape = 16
+    value = 500_000
+    skill = all 9
+    body = {
+        damage /= 2
+        health *= 100
+
+        speed /= 17.5
+        accel /= 8
+
+        shield = 0
+        regen = 0
+
+        density *= 0.4
+        fov -= 0.02
+        pushability *= 0.15
+    }
+    hits = team
+    for (a in 0..360 step 360 / 8)
+        guns += mothership1 + gun { angle += a },
+                mothership2 + gun { angle += a }
+}

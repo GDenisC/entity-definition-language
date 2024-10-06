@@ -1,0 +1,21 @@
+import basic
+
+state twin {
+    recoil *= 0.5
+    shudder *= 0.9
+    health *= 0.9
+    damage *= 0.7
+    spray *= 1.2
+}
+
+gun twin extends basic {
+    length = 1d
+
+    stats += twin
+}
+
+@tier(Basic, 1)
+tank Twin extends genericTank {
+    label = "Twin"
+    guns = twin(y += 5.5), twin(y -= 5.5)
+}

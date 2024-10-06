@@ -1,0 +1,67 @@
+generic = {
+    bodyDamage = "Body Damage"
+    maxHealth = "Max Health"
+    bulletSpeed = "Bullet Speed"
+    health = "Bullet Health"
+    penetration = "Bullet Penetration"
+    damage = "Bullet Damage"
+    reload = "Reload"
+    movementSpeed = "Movement Speed"
+    shieldRegen = "Shield Regeneration"
+    shield = "Shield Capacity"
+}
+mixed = {
+    bulletSpeed = "Weapon Speed"
+    health = "Weapon Health"
+    penetration = "Weapon Penetration"
+    damage = "Weapon Damage"
+}
+drone = {
+    bulletSpeed = "Drone Speed"
+    health = "Drone Health"
+    penetration = "Drone Penetration"
+    damage = "Drone Damage"
+    reload = "Respawn Rate"
+}
+swarm = {
+    bulletSpeed = "Swarm Speed"
+    health = "Swarm Health"
+    penetration = "Swarm Penetration"
+    damage = "Swarm Damage"
+}
+necro = {
+    bulletSpeed = "Drone Speed"
+    health = "Drone Health"
+    penetration = "Drone Penetration"
+    damage = "Drone Damage"
+    reload = "Max Drone Count"
+}
+trap = {
+    bulletSpeed = "Placement Speed"
+    health = "Trap Health"
+    penetration = "Trap Penetration"
+    damage = "Trap Damage"
+}
+desmos = {
+    bulletSpeed = "Wave Frequency"
+}
+whirlwind = {
+    bulletSpeed = "Orbit Speed"
+    health = "Satellite Health"
+    penetration = "Satellite Penetration"
+    damage = "Satellite Damage"
+    reload = "Respawn Rate"
+}
+heal = {
+    penetration = "Heal Rate"
+    damage = "Heal Amount"
+}
+smasher = {
+    reload = "Engine Acceleration"
+}
+flail = {
+    health = "Ball Longevity"
+    penetration = "Ball Sharpness"
+    damage = "Ball Damage"
+    reload = "Ball Density"
+}
