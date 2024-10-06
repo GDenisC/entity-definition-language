@@ -10,8 +10,8 @@
     "convert-gunvals": "node ./converter/gunvals.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "DenisC",
+  "license": "MIT",
   "type": "module",
   "devDependencies": {
     "@types/node": "^22.7.4"
