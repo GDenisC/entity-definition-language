@@ -1,3 +1,5 @@
+/*
+Only can be used as a reference
 // Bases
 basic = {
     reload = 10.5
@@ -789,3 +791,4 @@ noSpread = {
     shudder = 0
     spray = 0
 }
+*/

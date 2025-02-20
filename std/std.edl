@@ -1,3 +1,5 @@
+// todo: generate upgrades tiers
+
 const defaultSkills = 9
 const smasherSkills = 12
 
@@ -20,11 +22,7 @@ tank GenericEntity {
     effects = damage, rate, motion
     draw = self, border, fill
     flags = acceptsScore, healthWithLevel, canBeOnLeaderboard
-
-    // disabled: independent, hasNoMaster, isImmuneToTiles, intangible, giveKillMessage, canGoOutsideRoom, dieAtLowSpeed, dieAtLowRange, clearOnMasterUpgrade, persistsAfterDeath, variesInSide, hasNoRecoil, syncWithTank, buffVsFood, obstacle, cravesAttention, necro
-
-    for (a in 0..9 step 1)
-        upgrades_tier_[a] = none
+    // disabled flags: independent, hasNoMaster, isImmuneToTiles, intangible, giveKillMessage, canGoOutsideRoom, dieAtLowSpeed, dieAtLowRange, clearOnMasterUpgrade, persistsAfterDeath, variesInSide, hasNoRecoil, syncWithTank, buffVsFood, obstacle, cravesAttention, necro
 
     skill = all 0
 

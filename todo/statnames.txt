@@ -1,4 +1,4 @@
-generic = {
+state name generic = {
     bodyDamage = "Body Damage"
     maxHealth = "Max Health"
     bulletSpeed = "Bullet Speed"
@@ -10,56 +10,56 @@ generic = {
     shieldRegen = "Shield Regeneration"
     shield = "Shield Capacity"
 }
-mixed = {
+state name mixed = {
     bulletSpeed = "Weapon Speed"
     health = "Weapon Health"
     penetration = "Weapon Penetration"
     damage = "Weapon Damage"
 }
-drone = {
+state name drone = {
     bulletSpeed = "Drone Speed"
     health = "Drone Health"
     penetration = "Drone Penetration"
     damage = "Drone Damage"
     reload = "Respawn Rate"
 }
-swarm = {
+state name swarm = {
     bulletSpeed = "Swarm Speed"
     health = "Swarm Health"
     penetration = "Swarm Penetration"
     damage = "Swarm Damage"
 }
-necro = {
+state name necro = {
     bulletSpeed = "Drone Speed"
     health = "Drone Health"
     penetration = "Drone Penetration"
     damage = "Drone Damage"
     reload = "Max Drone Count"
 }
-trap = {
+state name trap = {
     bulletSpeed = "Placement Speed"
     health = "Trap Health"
     penetration = "Trap Penetration"
     damage = "Trap Damage"
 }
-desmos = {
+state name desmos = {
     bulletSpeed = "Wave Frequency"
 }
-whirlwind = {
+state name whirlwind = {
     bulletSpeed = "Orbit Speed"
     health = "Satellite Health"
     penetration = "Satellite Penetration"
     damage = "Satellite Damage"
     reload = "Respawn Rate"
 }
-heal = {
+state name heal = {
     penetration = "Heal Rate"
     damage = "Heal Amount"
 }
-smasher = {
+state name smasher = {
     reload = "Engine Acceleration"
 }
-flail = {
+state name flail = {
     health = "Ball Longevity"
     penetration = "Ball Sharpness"
     damage = "Ball Damage"
